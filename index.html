@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <product-card
+      style="--btn-color: linear-gradient(to right, #2F66B6, #6235D1); 
+      --btn-color-hover: linear-gradient(to right, #234d8c, #432393); "
+      img="dog.png"
+      name="Dodo"
+      price="300"
+      des="Dodo is a cheerful dachund loves playing in the park and making new friends. With a heart full of sunshine and an endless wagging tail, he brings warmth to everyone he meets."
+      rate="2"
+    >
+      <a href="https://www.instagram.com/yu_dodogo" slot="extra" target="_blank">
+        🔗 View more about Dodo
+      </a>
+    </product-card>
+    <product-card
+      img="cat.png"
+      name="Mochi"
+      price="130"
+      des="Mochi is a fluffy white Pomeranian with a gentle personality. She enjoys cuddles, afternoon naps, and watching the world go by from her favorite window seat."
+      rate="3"
+    >
+      <a href="https://www.instagram.com/yu_dodogo" slot="extra" target="_blank">
+        🔗 View more about Mochi
+      </a>
+    </product-card>
+    <product-card
+      img="dog2.png"
+      name="Bruno"
+      price="300"
+      des="Bruno is a curious little explorer with a big heart."
+      rate="4"
+    >
+      <a href="https://www.instagram.com/yu_dodogo" slot="extra" target="_blank">
+        🔗 View more about Bruno
+      </a>
+    </product-card>
+    </div>
+    <script>
+      // 7. 處理 add-to-cart 事件
+      document.querySelectorAll('product-card').forEach(card => {
+        card.addEventListener('add-to-cart', e => {
+          const { name, price, quantity } = e.detail;
+          alert(`${name} - ${quantity} added to cart`);
+        });
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

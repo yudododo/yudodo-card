@@ -1,0 +1,19 @@
+html{
+  background: #000;
+}
+.container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 使用 <slot> 元素來允許使用者插入自定義內容的 CSS */
+a{
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+}
